@@ -1,0 +1,22 @@
+<div class="time-box">
+  <div class="progress-circle" [style.--progress]="(counter % 60000) / 600 + '%'">
+    <div class="timer">{{ counter | time }}</div>
+  </div>
+</div>
+<div class="btns">
+  @if(!isStart){
+  <button (click)="start()">START</button>
+  } @else if (!isPause) {
+  <button (click)="pause()">PAUSE</button>
+  <button (click)="lap()">LAP</button>
+  }@else if (isPause) {
+  <button (click)="reset()">RESET</button>
+  <button (click)="resume()">RESUME</button>
+  }
+</div>
+
+@for(item of lapList; track item){
+<ng-container>
+  <div class="btns">{{ item | time }}</div>
+</ng-container>
+}

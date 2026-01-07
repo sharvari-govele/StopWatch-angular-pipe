@@ -1,0 +1,43 @@
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  font-size: 40px;
+}
+.progress-circle {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  background: conic-gradient(#3498db var(--progress, 0%), #e0e0e0 0deg);
+}
+
+.progress-circle::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - (10px * 2));
+  height: calc(100% - (10px * 2));
+  background: white;
+  border-radius: 50%;
+}
+
+.timer {
+  position: relative;
+  z-index: 1;
+  font-size: 70px;
+  color: #333;
+}
+
+.time-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+button {
+  width: 120px;
+  height: 40px;
+}

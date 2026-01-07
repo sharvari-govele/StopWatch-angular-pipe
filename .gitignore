@@ -1,0 +1,10 @@
+node_modules/
+
+.angular/
+dist/
+out-tsc/
+.tsbuildinfo
+.vite/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
